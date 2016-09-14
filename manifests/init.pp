@@ -380,6 +380,7 @@ class apache (
 
     ::apache::vhost { 'default':
       ensure          => $default_vhost_ensure,
+      serveraliases   => ['*',],
       port            => 8080,
       docroot         => $docroot,
       scriptalias     => $scriptalias,
